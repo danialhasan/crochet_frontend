@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../style.css" />
     <title>Document</title>
-</head>
-<body>
-   <h1 class="">Hello!</h1> 
-</body>
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <h1>CrochetLand</h1>
+      </div>
+      <div>
+        <h2>Add New Project</h2>
+      </div>
+    </div>
+    <form action="" id="addNewProjectForm">
+      <input
+        type="file"
+        name="project_image"
+        accept="image/png,image/jpg,image/jpeg"
+      />
+      <label for="title">Add title here</label>
+      <input type="text" name="title" placeholder="Test title" />
+
+      <label for="name">Add name here</label>
+      <input type="text" name="name" placeholder="Test Name" />
+
+      <label for="project_description"
+        >Add crochet project description here</label
+      >
+      <textarea
+        name="project_description"
+        cols="30"
+        rows="10"
+        placeholder="test project description"
+      ></textarea>
+      <!-- need to figure out a way to iterate through all steps and save into JSON object -->
+      <div class="stepsContainer" id="stepsContainerTemplate">
+        <div class="stepHeader">
+          <h1>Step X</h1>
+          <button class="deleteStep" onclick="deleteStep(event, this)">
+            X
+          </button>
+        </div>
+        <div class="stepDescription">
+          <textarea
+            name="step_template"
+            placeholder="Add description here"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+    </form>
+    <div class="footer">
+      <button class="add_step" onclick="addStep()">Add Step</button>
+      <button class="save_project" onclick="saveProject()">Save Project</button>
+    </div>
+    <script src="../script.js"></script>
+  </body>
 </html>

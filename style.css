@@ -1,75 +1,145 @@
-:root{
-    --dark-purple:#932F6D;
-    --purple:#E07BE9;
-    --light-purple:#DCCCFF;
+:root {
+  --dark-purple: #932f6d;
+  --purple: #e07be9;
+  --light-purple: #dcccff;
+  font-family: "Inter", sans-serif;
 }
-@font-face {
-    font-family: ArimaMadurai;
-    src: url('./fonts/ArimaMadurai-Medium.ttf');
-}
-#navbar{
-    display:flex;
-    position:relative;
-    width:100%;
-    justify-content:center;
-    padding-bottom:25px
-}
-#navbar h1{
-    font-family:ArimaMadurai, Geneva, Tahoma, sans-serif;
-    font-size:30px;
-    margin-top: 30px;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@font-face {
+  font-family: ArimaMadurai;
+  src: url("./fonts/ArimaMadurai-Medium.ttf");
 }
-#navbar button{
-    position:absolute;
-    right:0;
-    margin-right:25px;
-    margin-top:20px
+input[type="text"] {
+  font-size: 24px;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
 }
-.addButton{
-    background-color:var(--dark-purple);
-    color:white;
-    padding: 15px 30px;
-    border-radius:10px;
-    border:none;
-    font-weight:bold;
-    font-size:15px;
+textarea {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  resize: vertical;
 }
-.project{
-    width:225px;
-    height:200px;
-    background-color:var(--dark-purple)
+#navbar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
 }
-.top, .bottom{
-    width:100%;
-    height:50%;
+#navbar h1 {
+  font-family: ArimaMadurai, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  margin-top: 30px;
 }
-.bottom{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#navbar h2 {
+  font-size: 30px;
+  margin-top: 25px;
+  font-weight: bold;
 }
-.project-title{
-    font-size:20px;
-    padding-top:10px;
-    margin:0px 10px
+#navbar button {
+  margin-top: 20px;
 }
-#template-project{
-    display:none
+.addButton {
+  background-color: var(--dark-purple);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
 }
-.project-name, .project-description, .project-steps{
-    font-size:15px;
-    padding-top:10px;
-    margin:0px 10px
+.project {
+  width: 225px;
+  height: 200px;
+  background-color: var(--dark-purple);
 }
-.project-description{
-text-overflow:clip;
-overflow:hidden;
-white-space:nowrap
+.top,
+.bottom {
+  width: 100%;
+  height: 50%;
 }
-.project-steps{
-    margin-right:15px;
+.bottom {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.row{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
+.project-title {
+  font-size: 20px;
+  padding-top: 10px;
+  margin: 0px 10px;
+}
+#template-project {
+  /* display:none */
+}
+.project-name,
+.project-description,
+.project-steps {
+  font-size: 15px;
+  padding-top: 10px;
+  margin: 0px 10px;
+}
+.project-description {
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.project-steps {
+  margin-right: 15px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#addNewProjectForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  width: auto;
+}
+
+#addNewProjectForm label {
+  padding: 10px 0px;
+  font-size: 20px;
+}
+.save_project,
+.add_step {
+  padding: 15px 0px;
+  border: none;
+  border-radius: 10px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.add_step {
+  background-color: var(--dark-purple);
+  color: white;
+}
+.save_project {
+  background-color: var(--light-purple);
+}
+.footer {
+  margin: 20px 30px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+#stepsContainerTemplate{
+  display: none;
+}
+.stepHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+.stepsContainer {
+  margin-top: 20px;
+}
+.deleteStep {
+  padding: 5px 10px;
 }
