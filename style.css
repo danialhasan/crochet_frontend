@@ -54,6 +54,7 @@ textarea {
   width: 225px;
   height: 200px;
   background-color: var(--dark-purple);
+  margin-bottom:20px
 }
 .top,
 .bottom {
@@ -69,7 +70,7 @@ textarea {
   margin: 0px 10px;
 }
 #template-project {
-  /* display:none */
+  display:none
 }
 .project-name,
 .project-description,
@@ -126,7 +127,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
 }
-#stepsContainerTemplate{
+#stepsContainerTemplate {
   display: none;
 }
 .stepHeader {
@@ -143,3 +144,15 @@ textarea {
 .deleteStep {
   padding: 5px 10px;
 }
+.projectImg {
+  width: 225px;
+  height: 100px;
+}
+#projects{
+  display:flex;
+  flex-direction:column;
+  width:auto;
+  border:1px solid red;
+  align-items:center;
+}
+

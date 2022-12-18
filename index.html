@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body onload="loadProjects()">
     <div id="navbar">
       <h1>CrochetLand</h1>
       <button class="addButton" onclick="navigate('/routes/new')">
@@ -19,14 +19,13 @@
       <div id="template-project" class="project">
         <!-- we'll use this project element to generate the actual projects in javascript. -->
         <div class="top">
-          <img src="" alt="" srcset="https://via.placeholder.com/225x100" />
+          <img class="projectImg" src="" alt="" srcset="https://via.placeholder.com/225x100" />
         </div>
         <div class="bottom">
           <h3 class="project-title">Title of Project</h3>
           <h4 class="project-name">Isham Khan</h4>
           <div class="row">
             <h4 class="project-description">Project Description</h4>
-            <h4 class="project-steps">Steps: 5</h4>
           </div>
         </div>
       </div>
