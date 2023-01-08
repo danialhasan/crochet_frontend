@@ -1,5 +1,5 @@
 const navigate = (route) => {
-  window.location = `${route}.html`;
+  window.location = route;
 };
 function addStep() {
   let stepsContainerTemplate = document
@@ -60,7 +60,7 @@ async function saveProject() {
     );
   }
   localStorage.setItem(projectId, JSON.stringify(jsonFormData));
-  navigate("/index");
+  navigate("/index.html");
 }
 async function convertFileToBase64(file) {
   /**
@@ -93,6 +93,7 @@ function loadProjects() {
     /**
      * For each project, clone the projectTemplate node. Fill it
      * with data from the project, and then append it to the DOM.
+     * Add an event listener to each project that opens it up when it's clicked.
      */
     const projectInfo = JSON.parse(projectValues[key]);
     let stepsContainerClone = document
@@ -112,9 +113,11 @@ function loadProjects() {
     );
     topDiv.childNodes[1].src = projectInfo.project_image;
 
-    topDiv.childNodes[1].srcset ='' 
-    // console.log(projectInfo.project_image);
-
+    topDiv.childNodes[1].srcset = "";
+    stepsContainerClone.addEventListener("click", () => {
+      console.log(`Project ${stepsContainerClone.id} clicked!`);
+      navigate(`/routes/project.html?project=${stepsContainerClone.id}`);
+    });
     projectContainer.appendChild(stepsContainerClone);
   }
 }

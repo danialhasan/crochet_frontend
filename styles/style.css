@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @font-face {
   font-family: ArimaMadurai;
-  src: url("./fonts/ArimaMadurai-Medium.ttf");
+  src: url("../fonts/ArimaMadurai-Medium.ttf");
 }
 input[type="text"] {
   font-size: 24px;
@@ -54,7 +54,7 @@ textarea {
   width: 225px;
   height: 200px;
   background-color: var(--dark-purple);
-  margin-bottom:20px
+  margin-bottom: 20px;
 }
 .top,
 .bottom {
@@ -70,7 +70,7 @@ textarea {
   margin: 0px 10px;
 }
 #template-project {
-  display:none
+  display: none;
 }
 .project-name,
 .project-description,
@@ -144,15 +144,49 @@ textarea {
 .deleteStep {
   padding: 5px 10px;
 }
+/* for index.html projects */
 .projectImg {
   width: 225px;
   height: 100px;
 }
-#projects{
-  display:flex;
-  flex-direction:column;
-  width:auto;
-  border:1px solid red;
-  align-items:center;
+#projects {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-items: center;
 }
 
+#project {
+  width: auto;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+#project h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+#projectName {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 10px 0px;
+}
+/* for /project images */
+._projectImg {
+  margin: 25px auto;
+  width: 600px;
+  height: 300px;
+}
+.projectStepTemplate {
+  display: none;
+}
+.projectStep h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.projectStep {
+  margin: 20px 0px;
+}

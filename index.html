@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Document</title>
   </head>
   <body onload="loadProjects()">
     <div id="navbar">
       <h1>CrochetLand</h1>
-      <button class="addButton" onclick="navigate('/routes/new')">
+      <button class="addButton" onclick="navigate('/routes/new.html')">
         Add New Project
       </button>
     </div>
@@ -19,7 +19,12 @@
       <div id="template-project" class="project">
         <!-- we'll use this project element to generate the actual projects in javascript. -->
         <div class="top">
-          <img class="projectImg" src="" alt="" srcset="https://via.placeholder.com/225x100" />
+          <img
+            class="projectImg"
+            src=""
+            alt=""
+            srcset="https://via.placeholder.com/225x100"
+          />
         </div>
         <div class="bottom">
           <h3 class="project-title">Title of Project</h3>

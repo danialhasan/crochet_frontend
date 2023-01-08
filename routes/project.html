@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body onload="loadProject(window.location.search.split('=')[1])">
+    <div onclick="navigate('/index.html')"id="navbar">
+      <h1>CrochetLand</h1>
+    </div>
+    <div id="project">
+      <h1 id="projectTitle">Title of project</h1>
+      <img
+        class="_projectImg"
+        src=""
+        alt="Project image"
+        srcset="https://via.placeholder.com/340x200"
+      />
+      <p id="projectName">Created by [name]</p>
+      <p id="projectDescription">Project Description</p>
+      <div class="stepsContainer">
+        <div class="projectStepTemplate">
+          <h3>Step 1</h3>
+          <p>Add step description here...</p>
+        </div>
+      </div>
+    </div>
+    <script src="../loadProject.js"></script>
+  </body>
+</html>
